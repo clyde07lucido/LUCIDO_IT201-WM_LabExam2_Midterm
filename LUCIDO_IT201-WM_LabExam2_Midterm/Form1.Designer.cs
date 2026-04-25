@@ -191,6 +191,7 @@
             this.radioButton_SeniorCitizen.TabStop = true;
             this.radioButton_SeniorCitizen.Text = "Senior Citizen";
             this.radioButton_SeniorCitizen.UseVisualStyleBackColor = true;
+            this.radioButton_SeniorCitizen.CheckedChanged += new System.EventHandler(this.radioButton_SeniorCitizen_CheckedChanged);
             // 
             // radioButton_WithDiscCard
             // 
@@ -203,6 +204,7 @@
             this.radioButton_WithDiscCard.TabStop = true;
             this.radioButton_WithDiscCard.Text = "With Disc. Card";
             this.radioButton_WithDiscCard.UseVisualStyleBackColor = true;
+            this.radioButton_WithDiscCard.CheckedChanged += new System.EventHandler(this.radioButton_WithDiscCard_CheckedChanged);
             // 
             // radioButton_EmployeeDisc
             // 
@@ -215,6 +217,7 @@
             this.radioButton_EmployeeDisc.TabStop = true;
             this.radioButton_EmployeeDisc.Text = "Employee Disc.";
             this.radioButton_EmployeeDisc.UseVisualStyleBackColor = true;
+            this.radioButton_EmployeeDisc.CheckedChanged += new System.EventHandler(this.radioButton_EmployeeDisc_CheckedChanged);
             // 
             // radioButton_NoDisc
             // 
@@ -227,6 +230,7 @@
             this.radioButton_NoDisc.TabStop = true;
             this.radioButton_NoDisc.Text = "No Discount";
             this.radioButton_NoDisc.UseVisualStyleBackColor = true;
+            this.radioButton_NoDisc.CheckedChanged += new System.EventHandler(this.radioButton_NoDisc_CheckedChanged);
             // 
             // label8
             // 
