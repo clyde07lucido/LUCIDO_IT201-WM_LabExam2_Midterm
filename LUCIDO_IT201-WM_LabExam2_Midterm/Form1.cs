@@ -34,27 +34,7 @@ namespace LUCIDO_IT201_WM_LabExam2_Midterm
             textBox_Quantity.Focus();
         }
 
-        private void quantity_price_convert()
-        {
-            if (!int.TryParse(textBox_Quantity.Text, out qty))
-                throw new Exception("Invalid quantity");
-
-            price = Convert.ToDouble(textBox_Price.Text.Replace("Php ", ""));
-        }
-
-        private void computation_Formula_and_DisplayData()
-        {
-            discounted_amt = (qty * price) - discount_amt;
-            textBox_DiscountAmount.Text = discount_amt.ToString("n");
-            textBox_DiscountedAmount.Text = discounted_amt.ToString("n");
-        }
-        private void price_item_TextValue(string itemname, string price)
-        {
-            textBox_ItemName.Text = itemname;
-            textBox_Price.Text = price;
-        }
-
-        private bool ValidateInput()
+        private bool quantity_price_convert()
         {
             if (!int.TryParse(textBox_Quantity.Text, out qty))
             {
@@ -71,98 +51,19 @@ namespace LUCIDO_IT201_WM_LabExam2_Midterm
             return true;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void computation_Formula_and_DisplayData()
         {
-            price_item_TextValue(lbl_item1.Text, "Php 150.00");
-            quantityTextBox();
+            double gross = qty * price;
+            discounted_amt = gross - discount_amt;
+
+            textBox_DiscountAmount.Text = discount_amt.ToString("n2");
+            textBox_DiscountedAmount.Text = discounted_amt.ToString("n2");
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void price_item_TextValue(string itemname, string price)
         {
-            price_item_TextValue(lbl_item2.Text, "Php 200.00");
-            quantityTextBox();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            price_item_TextValue(lbl_item3.Text, "Php 250.00");
-            quantityTextBox();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            price_item_TextValue(lbl_item4.Text, "Php 300.00");
-            quantityTextBox();
-        }
-
-        private void radioButton_SeniorCitizen_CheckedChanged(object sender, EventArgs e)
-        {
-            try 
-            {
-                quantity_price_convert();
-                discount_amt = (qty * price) * 0.30;
-                computation_Formula_and_DisplayData();
-                radioButton_WithDiscCard.Checked = false;
-                radioButton_EmployeeDisc.Checked = false;
-                radioButton_NoDisc.Checked = false;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please enter a valid quantity.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                quantityTextBox();
-            }
-        }
-
-        private void radioButton_WithDiscCard_CheckedChanged(object sender, EventArgs e)
-        {
-            try {
-                quantity_price_convert();
-                discount_amt = (qty * price) * 0.20;
-                computation_Formula_and_DisplayData();
-                radioButton_SeniorCitizen.Checked = false;
-                radioButton_EmployeeDisc.Checked = false;
-                radioButton_NoDisc.Checked = false;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please enter a valid quantity.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                quantityTextBox();
-            }
-        }
-
-        private void radioButton_EmployeeDisc_CheckedChanged(object sender, EventArgs e)
-        {
-            try {
-                quantity_price_convert();
-                discount_amt = (qty * price) * 0.10;
-                computation_Formula_and_DisplayData();
-                radioButton_SeniorCitizen.Checked = false;
-                radioButton_WithDiscCard.Checked = false;
-                radioButton_NoDisc.Checked = false;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please enter a valid quantity.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                quantityTextBox();
-            }
-        }
-
-        private void radioButton_NoDisc_CheckedChanged(object sender, EventArgs e)
-        {
-            try 
-            {
-                quantity_price_convert();
-                discount_amt = 0;
-                computation_Formula_and_DisplayData();
-                radioButton_SeniorCitizen.Checked = false;
-                radioButton_WithDiscCard.Checked = false;
-                radioButton_EmployeeDisc.Checked = false;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please enter a valid quantity.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                quantityTextBox();
-            }
+            textBox_ItemName.Text = itemname;
+            textBox_Price.Text = price;
         }
 
         private void ComputeTotals()
@@ -185,13 +86,102 @@ namespace LUCIDO_IT201_WM_LabExam2_Midterm
             }
 
             change = cash - totalDiscounted;
-
             textBox_Change.Text = change.ToString("n2");
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(lbl_item1.Text, "Php 150.00");
+            quantityTextBox();
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(lbl_item3.Text, "Php 250.00");
+            quantityTextBox();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(lbl_item2.Text, "Php 200.00");
+            quantityTextBox();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            price_item_TextValue(lbl_item4.Text, "Php 300.00");
+            quantityTextBox();
+        }
+
+        private void radioButton_SeniorCitizen_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!radioButton_SeniorCitizen.Checked) return;
+            if (!quantity_price_convert()) return;
+
+            discount_amt = (qty * price) * 0.30;
+            computation_Formula_and_DisplayData();
+        }
+
+        private void radioButton_WithDiscCard_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!radioButton_WithDiscCard.Checked) return;
+            if (!quantity_price_convert()) return;
+
+            discount_amt = (qty * price) * 0.20;
+            computation_Formula_and_DisplayData();
+        }
+
+        private void radioButton_EmployeeDisc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!radioButton_EmployeeDisc.Checked) return;
+            if (!quantity_price_convert()) return;
+
+            discount_amt = (qty * price) * 0.10;
+            computation_Formula_and_DisplayData();
+        }
+
+        private void radioButton_NoDisc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!radioButton_NoDisc.Checked) return;
+            if (!quantity_price_convert()) return;
+
+            discount_amt = 0;
+            computation_Formula_and_DisplayData();
+        }
 
         private void button_New_Click(object sender, EventArgs e)
+        {
+            textBox_ItemName.Clear();
+            textBox_Price.Clear();
+            textBox_Quantity.Clear();
+            textBox_DiscountAmount.Clear();
+            textBox_DiscountedAmount.Clear();
+            textBox_CashRendered.Clear();
+            textBox_Change.Clear();
+            textBox_TotalQuantity.Clear();
+            textBox_TotalDiscountGiven.Clear();
+            textBox_TotalDiscountedGiven.Clear();
+
+            totalQty = 0;
+            totalDiscount = 0;
+            totalDiscounted = 0;
+            cash = 0;
+            change = 0;
+
+            discount_amt = 0;
+            discounted_amt = 0;
+            qty = 0;
+            price = 0;
+
+            radioButton_SeniorCitizen.Checked = false;
+            radioButton_WithDiscCard.Checked = false;
+            radioButton_EmployeeDisc.Checked = false;
+            radioButton_NoDisc.Checked = false;
+
+            textBox_Quantity.Focus();
+        }
+
+        private void button_Cancel_Click(object sender, EventArgs e)
         {
             textBox_ItemName.Clear();
             textBox_Price.Clear();
@@ -212,20 +202,6 @@ namespace LUCIDO_IT201_WM_LabExam2_Midterm
             textBox_Quantity.Focus();
         }
 
-        private void button_Cancel_Click(object sender, EventArgs e)
-        {
-            textBox_ItemName.Clear();
-            textBox_Price.Clear();
-            textBox_Quantity.Clear();
-
-            radioButton_SeniorCitizen.Checked = false;
-            radioButton_WithDiscCard.Checked = false;
-            radioButton_EmployeeDisc.Checked = false;
-            radioButton_NoDisc.Checked = false;
-
-            textBox_Quantity.Focus();
-        }
-
         private void button_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -233,6 +209,12 @@ namespace LUCIDO_IT201_WM_LabExam2_Midterm
 
         private void button_Calculate_Click(object sender, EventArgs e)
         {
+            if (discounted_amt == 0 && discount_amt == 0)
+            {
+                MessageBox.Show("Please select discount and enter quantity first!");
+                return;
+            }
+
             ComputeTotals();
             ComputeChange();
         }
