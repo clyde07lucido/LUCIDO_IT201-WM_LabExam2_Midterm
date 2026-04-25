@@ -56,23 +56,23 @@
             this.button_Cancel = new System.Windows.Forms.Button();
             this.button_Exit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_item4 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbl_item2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbl_item3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbl_item1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox_CashRendered = new System.Windows.Forms.TextBox();
             this.textBox_Change = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_item1 = new System.Windows.Forms.Label();
-            this.lbl_item3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbl_item2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbl_item4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +81,7 @@
             this.label1.Font = new System.Drawing.Font("Algerian", 18.26866F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(53, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(546, 38);
+            this.label1.Size = new System.Drawing.Size(560, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "4JEE FOODS INC. POINT OF SALE";
             // 
@@ -109,6 +109,7 @@
             // 
             this.textBox_ItemName.Location = new System.Drawing.Point(173, 67);
             this.textBox_ItemName.Name = "textBox_ItemName";
+            this.textBox_ItemName.ReadOnly = true;
             this.textBox_ItemName.Size = new System.Drawing.Size(447, 22);
             this.textBox_ItemName.TabIndex = 3;
             // 
@@ -123,6 +124,7 @@
             // 
             this.textBox_Price.Location = new System.Drawing.Point(173, 132);
             this.textBox_Price.Name = "textBox_Price";
+            this.textBox_Price.ReadOnly = true;
             this.textBox_Price.Size = new System.Drawing.Size(156, 22);
             this.textBox_Price.TabIndex = 6;
             // 
@@ -140,6 +142,7 @@
             // 
             this.textBox_DiscountAmount.Location = new System.Drawing.Point(200, 265);
             this.textBox_DiscountAmount.Name = "textBox_DiscountAmount";
+            this.textBox_DiscountAmount.ReadOnly = true;
             this.textBox_DiscountAmount.Size = new System.Drawing.Size(420, 22);
             this.textBox_DiscountAmount.TabIndex = 8;
             // 
@@ -157,6 +160,7 @@
             // 
             this.textBox_DiscountedAmount.Location = new System.Drawing.Point(200, 300);
             this.textBox_DiscountedAmount.Name = "textBox_DiscountedAmount";
+            this.textBox_DiscountedAmount.ReadOnly = true;
             this.textBox_DiscountedAmount.Size = new System.Drawing.Size(420, 22);
             this.textBox_DiscountedAmount.TabIndex = 10;
             // 
@@ -176,7 +180,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(27, 175);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(200, 26);
+            this.label7.Size = new System.Drawing.Size(218, 29);
             this.label7.TabIndex = 11;
             this.label7.Text = "Choose Discount:";
             // 
@@ -238,7 +242,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(27, 347);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 26);
+            this.label8.Size = new System.Drawing.Size(128, 29);
             this.label8.TabIndex = 16;
             this.label8.Text = "Summary:";
             // 
@@ -358,84 +362,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item Display";
             // 
-            // label12
+            // lbl_item4
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(675, 467);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(184, 26);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Cash Rendered:";
+            this.lbl_item4.AutoSize = true;
+            this.lbl_item4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_item4.Location = new System.Drawing.Point(264, 344);
+            this.lbl_item4.Name = "lbl_item4";
+            this.lbl_item4.Size = new System.Drawing.Size(121, 20);
+            this.lbl_item4.TabIndex = 38;
+            this.lbl_item4.Text = "Combo Meal D";
             // 
-            // label13
+            // pictureBox4
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(931, 467);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 26);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Change:";
-            // 
-            // textBox_CashRendered
-            // 
-            this.textBox_CashRendered.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_CashRendered.Location = new System.Drawing.Point(680, 509);
-            this.textBox_CashRendered.Multiline = true;
-            this.textBox_CashRendered.Name = "textBox_CashRendered";
-            this.textBox_CashRendered.Size = new System.Drawing.Size(229, 44);
-            this.textBox_CashRendered.TabIndex = 30;
-            // 
-            // textBox_Change
-            // 
-            this.textBox_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Change.Location = new System.Drawing.Point(936, 509);
-            this.textBox_Change.Multiline = true;
-            this.textBox_Change.Name = "textBox_Change";
-            this.textBox_Change.ReadOnly = true;
-            this.textBox_Change.Size = new System.Drawing.Size(229, 44);
-            this.textBox_Change.TabIndex = 31;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.GrayText;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 129);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // lbl_item1
-            // 
-            this.lbl_item1.AutoSize = true;
-            this.lbl_item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_item1.Location = new System.Drawing.Point(21, 172);
-            this.lbl_item1.Name = "lbl_item1";
-            this.lbl_item1.Size = new System.Drawing.Size(119, 20);
-            this.lbl_item1.TabIndex = 32;
-            this.lbl_item1.Text = "Combo Meal A";
-            // 
-            // lbl_item3
-            // 
-            this.lbl_item3.AutoSize = true;
-            this.lbl_item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_item3.Location = new System.Drawing.Point(21, 344);
-            this.lbl_item3.Name = "lbl_item3";
-            this.lbl_item3.Size = new System.Drawing.Size(120, 20);
-            this.lbl_item3.TabIndex = 34;
-            this.lbl_item3.Text = "Combo Meal C";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.GrayText;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 205);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 129);
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.GrayText;
+            this.pictureBox4.Location = new System.Drawing.Point(261, 205);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(221, 129);
+            this.pictureBox4.TabIndex = 37;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // lbl_item2
             // 
@@ -457,25 +402,84 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // lbl_item4
+            // lbl_item3
             // 
-            this.lbl_item4.AutoSize = true;
-            this.lbl_item4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_item4.Location = new System.Drawing.Point(264, 344);
-            this.lbl_item4.Name = "lbl_item4";
-            this.lbl_item4.Size = new System.Drawing.Size(121, 20);
-            this.lbl_item4.TabIndex = 38;
-            this.lbl_item4.Text = "Combo Meal D";
+            this.lbl_item3.AutoSize = true;
+            this.lbl_item3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_item3.Location = new System.Drawing.Point(21, 344);
+            this.lbl_item3.Name = "lbl_item3";
+            this.lbl_item3.Size = new System.Drawing.Size(120, 20);
+            this.lbl_item3.TabIndex = 34;
+            this.lbl_item3.Text = "Combo Meal C";
             // 
-            // pictureBox4
+            // pictureBox2
             // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.GrayText;
-            this.pictureBox4.Location = new System.Drawing.Point(261, 205);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(221, 129);
-            this.pictureBox4.TabIndex = 37;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.GrayText;
+            this.pictureBox2.Location = new System.Drawing.Point(18, 205);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(221, 129);
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // lbl_item1
+            // 
+            this.lbl_item1.AutoSize = true;
+            this.lbl_item1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_item1.Location = new System.Drawing.Point(21, 172);
+            this.lbl_item1.Name = "lbl_item1";
+            this.lbl_item1.Size = new System.Drawing.Size(119, 20);
+            this.lbl_item1.TabIndex = 32;
+            this.lbl_item1.Text = "Combo Meal A";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(221, 129);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(675, 467);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(202, 29);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Cash Rendered:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(931, 467);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 29);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Change:";
+            // 
+            // textBox_CashRendered
+            // 
+            this.textBox_CashRendered.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CashRendered.Location = new System.Drawing.Point(680, 509);
+            this.textBox_CashRendered.Multiline = true;
+            this.textBox_CashRendered.Name = "textBox_CashRendered";
+            this.textBox_CashRendered.Size = new System.Drawing.Size(229, 44);
+            this.textBox_CashRendered.TabIndex = 30;
+            // 
+            // textBox_Change
+            // 
+            this.textBox_Change.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Change.Location = new System.Drawing.Point(936, 509);
+            this.textBox_Change.Multiline = true;
+            this.textBox_Change.Name = "textBox_Change";
+            this.textBox_Change.ReadOnly = true;
+            this.textBox_Change.Size = new System.Drawing.Size(229, 44);
+            this.textBox_Change.TabIndex = 31;
             // 
             // Form1
             // 
@@ -519,10 +523,10 @@
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
