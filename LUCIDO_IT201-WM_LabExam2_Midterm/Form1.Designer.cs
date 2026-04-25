@@ -45,7 +45,7 @@
             this.radioButton_EmployeeDisc = new System.Windows.Forms.RadioButton();
             this.radioButton_NoDisc = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6textBox_TotalDiscountedGiven = new System.Windows.Forms.TextBox();
+            this.textBox_TotalDiscountedGiven = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox_TotalDiscountGiven = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -242,13 +242,13 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Summary:";
             // 
-            // textBox6textBox_TotalDiscountedGiven
+            // textBox_TotalDiscountedGiven
             // 
-            this.textBox6textBox_TotalDiscountedGiven.Location = new System.Drawing.Point(232, 452);
-            this.textBox6textBox_TotalDiscountedGiven.Name = "textBox6textBox_TotalDiscountedGiven";
-            this.textBox6textBox_TotalDiscountedGiven.ReadOnly = true;
-            this.textBox6textBox_TotalDiscountedGiven.Size = new System.Drawing.Size(388, 22);
-            this.textBox6textBox_TotalDiscountedGiven.TabIndex = 20;
+            this.textBox_TotalDiscountedGiven.Location = new System.Drawing.Point(232, 452);
+            this.textBox_TotalDiscountedGiven.Name = "textBox_TotalDiscountedGiven";
+            this.textBox_TotalDiscountedGiven.ReadOnly = true;
+            this.textBox_TotalDiscountedGiven.Size = new System.Drawing.Size(388, 22);
+            this.textBox_TotalDiscountedGiven.TabIndex = 20;
             // 
             // label9
             // 
@@ -305,6 +305,7 @@
             this.button_Calculate.TabIndex = 23;
             this.button_Calculate.Text = "Calculate";
             this.button_Calculate.UseVisualStyleBackColor = true;
+            this.button_Calculate.Click += new System.EventHandler(this.button_Calculate_Click);
             // 
             // button_New
             // 
@@ -315,6 +316,7 @@
             this.button_New.TabIndex = 24;
             this.button_New.Text = "New";
             this.button_New.UseVisualStyleBackColor = true;
+            this.button_New.Click += new System.EventHandler(this.button_New_Click);
             // 
             // button_Cancel
             // 
@@ -325,6 +327,7 @@
             this.button_Cancel.TabIndex = 25;
             this.button_Cancel.Text = "Cancel";
             this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // button_Exit
             // 
@@ -335,6 +338,7 @@
             this.button_Exit.TabIndex = 26;
             this.button_Exit.Text = "Exit";
             this.button_Exit.UseVisualStyleBackColor = true;
+            this.button_Exit.Click += new System.EventHandler(this.button_Exit_Click);
             // 
             // groupBox1
             // 
@@ -380,7 +384,6 @@
             this.textBox_CashRendered.Location = new System.Drawing.Point(680, 509);
             this.textBox_CashRendered.Multiline = true;
             this.textBox_CashRendered.Name = "textBox_CashRendered";
-            this.textBox_CashRendered.ReadOnly = true;
             this.textBox_CashRendered.Size = new System.Drawing.Size(229, 44);
             this.textBox_CashRendered.TabIndex = 30;
             // 
@@ -491,7 +494,7 @@
             this.Controls.Add(this.button_Calculate);
             this.Controls.Add(this.textBox_TotalQuantity);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox6textBox_TotalDiscountedGiven);
+            this.Controls.Add(this.textBox_TotalDiscountedGiven);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox_TotalDiscountGiven);
             this.Controls.Add(this.label10);
@@ -544,7 +547,7 @@
         private System.Windows.Forms.RadioButton radioButton_EmployeeDisc;
         private System.Windows.Forms.RadioButton radioButton_NoDisc;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6textBox_TotalDiscountedGiven;
+        private System.Windows.Forms.TextBox textBox_TotalDiscountedGiven;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox_TotalDiscountGiven;
         private System.Windows.Forms.Label label10;

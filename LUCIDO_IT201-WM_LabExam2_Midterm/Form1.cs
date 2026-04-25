@@ -22,6 +22,12 @@ namespace LUCIDO_IT201_WM_LabExam2_Midterm
         double discount_amt;
         double discounted_amt;
 
+        int totalQty = 0;
+        double totalDiscount = 0;
+        double totalDiscounted = 0;
+        double cash = 0;
+        double change = 0;
+
         private void quantityTextBox()
         {
             textBox_Quantity.Clear();
@@ -157,6 +163,78 @@ namespace LUCIDO_IT201_WM_LabExam2_Midterm
                 MessageBox.Show("Please enter a valid quantity.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 quantityTextBox();
             }
+        }
+
+        private void ComputeTotals()
+        {
+            totalQty += qty;
+            totalDiscount += discount_amt;
+            totalDiscounted += discounted_amt;
+
+            textBox_TotalQuantity.Text = totalQty.ToString();
+            textBox_TotalDiscountGiven.Text = totalDiscount.ToString("n2");
+            textBox_TotalDiscountedGiven.Text = totalDiscounted.ToString("n2");
+        }
+
+        private void ComputeChange()
+        {
+            if (!double.TryParse(textBox_CashRendered.Text, out cash))
+            {
+                MessageBox.Show("Invalid cash amount!");
+                return;
+            }
+
+            change = cash - totalDiscounted;
+
+            textBox_Change.Text = change.ToString("n2");
+        }
+
+
+
+        private void button_New_Click(object sender, EventArgs e)
+        {
+            textBox_ItemName.Clear();
+            textBox_Price.Clear();
+            textBox_Quantity.Clear();
+            textBox_DiscountAmount.Clear();
+            textBox_DiscountedAmount.Clear();
+
+            discount_amt = 0;
+            discounted_amt = 0;
+            qty = 0;
+            price = 0;
+
+            radioButton_SeniorCitizen.Checked = false;
+            radioButton_WithDiscCard.Checked = false;
+            radioButton_EmployeeDisc.Checked = false;
+            radioButton_NoDisc.Checked = false;
+
+            textBox_Quantity.Focus();
+        }
+
+        private void button_Cancel_Click(object sender, EventArgs e)
+        {
+            textBox_ItemName.Clear();
+            textBox_Price.Clear();
+            textBox_Quantity.Clear();
+
+            radioButton_SeniorCitizen.Checked = false;
+            radioButton_WithDiscCard.Checked = false;
+            radioButton_EmployeeDisc.Checked = false;
+            radioButton_NoDisc.Checked = false;
+
+            textBox_Quantity.Focus();
+        }
+
+        private void button_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button_Calculate_Click(object sender, EventArgs e)
+        {
+            ComputeTotals();
+            ComputeChange();
         }
     }
 }
